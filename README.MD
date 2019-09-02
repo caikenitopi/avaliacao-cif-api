@@ -23,10 +23,23 @@ user@server:~$ virtualenv -p python3 .env
 user@server:~$ source .env/bin/activate
 ```
 
-Instalar requisitos
+Instalar dependências
 
 ```console
 user@server:~$ pip3 -r requirements.txt
+```
+
+Preparar base de dados
+
+```console
+user@server:~$ python3 manage.py migrate
+```
+
+Criar usuário com poderes de administração do sistema
+
+```console
+user@server:~$ python3 manage.py createsuperuser
+...
 ```
 
 Iniciar 
